@@ -61,8 +61,11 @@
         .table-note {
             font-size: 12px;
             color: #555;
-            text-align: left;
+            text-align: justify;
+            /* Justify the text within the table note */
             margin-top: 5px;
+            line-height: 1.5;
+            /* Adjust line height for better spacing */
         }
 
         /* Perapian untuk setiap hasil pertandingan */
@@ -147,7 +150,7 @@
         </table>
         <div class="table-note">
             <span>Keterangan:<br>
-                Ma = Main <br> S = Seri <br> Ka = Kalah <br> GM = Gol Memasukkan <br>
+                Ma = Main <br> Me = Menang <br> S = Seri <br> Ka = Kalah <br> GM = Gol Memasukkan <br>
                 GK = Gol Kebobolan</span>
         </div>
         <div class="mt-3">
