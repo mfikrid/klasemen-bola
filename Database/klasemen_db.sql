@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jul 2023 pada 11.13
+-- Waktu pembuatan: 25 Jul 2023 pada 11.15
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -40,6 +40,14 @@ CREATE TABLE `clubs` (
   `points` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `clubs`
+--
+
+INSERT INTO `clubs` (`id`, `club_name`, `club_city`, `played`, `win`, `lose`, `draw`, `goals_for`, `goals_against`, `points`) VALUES
+(35, 'Kalteng Putra', 'Palangkaraya', 1, 0, 0, 1, 1, 1, 1),
+(36, 'Sriwijaya FC', 'Palembang', 1, 0, 0, 1, 1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -54,6 +62,13 @@ CREATE TABLE `scores` (
   `score2` int(11) NOT NULL,
   `match_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `scores`
+--
+
+INSERT INTO `scores` (`id`, `club1_id`, `club2_id`, `score1`, `score2`, `match_date`) VALUES
+(77, 35, 36, 1, 1, '2023-07-25 11:14:45');
 
 --
 -- Indexes for dumped tables
@@ -81,13 +96,13 @@ ALTER TABLE `scores`
 -- AUTO_INCREMENT untuk tabel `clubs`
 --
 ALTER TABLE `clubs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT untuk tabel `scores`
 --
 ALTER TABLE `scores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
